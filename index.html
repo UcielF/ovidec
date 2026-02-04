@@ -24,21 +24,32 @@
                 <img src="img/ovidecLOGO.png" alt="Logo OVIDEC" class="brand__logo">
             </a>
 
+
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <nav class="nav" aria-label="Navegación principal">
                 <a href="#servicios">Servicios</a>
                 <a href="#como">Cómo trabajamos</a>
                 <a href="#ubicacion">Ubicación</a>
                 <a href="#contacto">Contacto</a>
             </nav>
-
-            <div class="header__cta">
-                <a class="btn btn--ghost" href="tel:+541153776915">Llamar</a>
-                <a class="btn btn--primary"
-                    href="https://wa.me/5491153776915?text=Hola%20OVIDEC!%20Quiero%20consultar%20por%20un%20turno."
-                    target="_blank" rel="noopener">
-                    WhatsApp
+            
+            <div class="header__cta header__social">
+                <a href="https://wa.me/5491153776915" target="_blank" aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+                <a href="https://instagram.com/ovidecinyeccionautomotriz" target="_blank" aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://facebook.com/ovidec" target="_blank" aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
                 </a>
             </div>
+
 
         </div>
     </header>
@@ -51,27 +62,54 @@
         <section class="hero">
             <div class="container hero__grid">
                 <div class="hero__content">
-                    <div class="pill">Mar del Plata · 09:00 a 19:00</div>
-                    <h1>Inyección electrónica y diagnóstico automotriz</h1>
+                    <div class="pill">Mar del Plata · General Pueyrredon</div>
+                    <h1>Inyección automotriz y diagnóstico computarizado</h1>
                     <p class="lead">
                         Reparación, limpieza y calibración profesional. Te asesoramos y armamos un presupuesto claro.
                     </p>
 
-                    <div class="hero__actions">
-                        <a class="btn btn--primary btn--lg"
-                            href="https://wa.me/5491153776915?text=Hola%20OVIDEC!%20Necesito%20turno%20para%20revisar%20mi%20auto."
-                            target="_blank" rel="noopener">
-                            Pedir turno por WhatsApp
+                    <div class="cta-modern">
+                        <a href="https://wa.me/5491153776915?text=Hola%20OVIDEC!%20Necesito%20turno%20para%20revisar%20mi%20auto."
+                            target="_blank" rel="noopener" class="cta-modern__link">
+
+                            <div class="cta-modern__icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+
+                            <div class="cta-modern__text">
+                                <span class="cta-modern__eyebrow">Turnos rápidos</span>
+                                <strong>Pedir turno por WhatsApp</strong>
+                                <small>Respuesta directa y asesoramiento</small>
+                            </div>
+
+                            <div class="cta-modern__arrow">
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </div>
                         </a>
-                        <a class="btn btn--ghost btn--lg" href="#servicios">Ver servicios</a>
                     </div>
 
-                    <div class="badges" aria-label="Beneficios">
-                        <div class="badge">Diagnóstico y criterio</div>
-                        <div class="badge">Presupuesto antes de reparar</div>
-                        <div class="badge">Atención por turno</div>
+
+                    <div class="hero__actions">
+                        <button class="btn btn--services btn--lg" id="toggle-services">
+                            <i class="fa-solid fa-list-check"></i>
+                            Ver servicios
+                            <i class="fa-solid fa-chevron-down chevron"></i>
+                        </button>
+
+
                     </div>
+
+                    <div class="badges" aria-label="Servicios">
+                        <a href="#inyeccion-electronica" class="badge">Inyección electrónica</a>
+                        <a href="#diagnostico-computarizado" class="badge">Diagnóstico computarizado</a>
+                        <a href="#bombas" class="badge">Bombas mecánicas</a>
+                        <a href="#inyectores-mecanicos" class="badge">Inyectores mecánicos</a>
+                        <a href="#inyectores-nafta" class="badge">Inyectores nafta</a>
+                    </div>
+
+
                 </div>
+
 
                 <aside class="hero__card" aria-label="Datos rápidos">
                     <div class="card">
@@ -84,12 +122,14 @@
 
                         <div class="card__row">
                             <span class="k">Horario</span>
-                            <span class="v">Lun a Sab · 09:00 a 19:00</span>
+                            <span class="v">Lun a Vie · 09:00 a 19:00</span>
+                            <span class="v">Sáb · 09:00 a 13:00</span>
                         </div>
 
                         <div class="card__row">
                             <span class="k">WhatsApp</span>
-                            <span class="v"><a href="https://wa.me/5491153776915" target="_blank" rel="noopener">11
+                            <span class="v"><a href="https://wa.me/5491153776915" target="_blank" rel="noopener">+54 9
+                                    11
                                     5377-6915</a></span>
                         </div>
 
@@ -115,7 +155,7 @@
 
                 <div class="splits">
                     <!-- 1 -->
-                    <article class="split reveal">
+                    <article class="split reveal" id="inyeccion-electronica">
                         <div class="split__text">
                             <span class="split__tag">Servicio 01</span>
                             <h3>Inyección electrónica</h3>
@@ -129,7 +169,7 @@
                     </article>
 
                     <!-- 2 -->
-                    <article class="split split--reverse reveal">
+                    <article class="split split--reverse reveal" id="diagnostico-computarizado">
                         <div class="split__text">
                             <span class="split__tag">Servicio 02</span>
                             <h3>Diagnóstico computarizado</h3>
@@ -143,7 +183,7 @@
                     </article>
 
                     <!-- 3 -->
-                    <article class="split reveal">
+                    <article class="split reveal" id="bombas">
                         <div class="split__text">
                             <span class="split__tag">Servicio 03</span>
                             <h3>Bombas mecánicas y Common Rail</h3>
@@ -157,7 +197,7 @@
                     </article>
 
                     <!-- 4 -->
-                    <article class="split split--reverse reveal">
+                    <article class="split split--reverse reveal" id="inyectores-mecanicos">
                         <div class="split__text">
                             <span class="split__tag">Servicio 04</span>
                             <h3>Inyectores mecánicos y Common Rail</h3>
@@ -171,14 +211,15 @@
                     </article>
 
                     <!-- 5 -->
-                    <article class="split reveal">
+                    <article class="split reveal" id="inyectores-nafta">
                         <div class="split__text">
                             <span class="split__tag">Servicio 05</span>
                             <h3>Inyectores Nafta</h3>
                             <p class="muted">Limpieza y banqueo para mejorar consumo, arranque y rendimiento.</p>
                         </div>
                         <figure class="split__media">
-                            <img src="servicios/banqueo2.jpeg" alt="Limpieza y banqueo de inyectores nafta" loading="lazy">
+                            <img src="servicios/banqueo2.jpeg" alt="Limpieza y banqueo de inyectores nafta"
+                                loading="lazy">
                         </figure>
                     </article>
                 </div>
@@ -265,12 +306,12 @@
                     </div>
                     <div class="info__item">
                         <span class="k">Horario</span>
-                        <span class="v">09:00 a 19:00</span>
+                        <span class="v">Lun a Vie · 09:00 a 19:00 - Sab · 09:00 a 13:00</span>
                     </div>
                     <div class="info__item">
                         <span class="k">WhatsApp</span>
                         <span class="v"><a href="https://wa.me/5491153776915" target="_blank" rel="noopener">
-                                115377-6915</a></span>
+                                +54 9 115377-6915</a></span>
                     </div>
                 </div>
             </div>
@@ -279,7 +320,7 @@
 
 
         <!-- Contacto -->
-        <section class="section section--alt" id="contacto">
+        <section class="section contacto" id="contacto">
             <div class="container">
                 <div class="section__head">
                     <h2>Contacto</h2>
@@ -295,9 +336,9 @@
                             <a class="btn btn--primary w-full"
                                 href="https://wa.me/5491153776915?text=Hola%20OVIDEC!%20Necesito%20asesoramiento%20por%20inyecci%C3%B3n%20automotriz."
                                 target="_blank" rel="noopener">
-                                WhatsApp 11 5377-6915
+                                WhatsApp
                             </a>
-                            <a class="btn btn--ghost w-full" href="tel:+541153776915">Llamar</a>
+                            <a class="btn btn--ghost w-full" href="tel:+541153776915">Llamar +54 9 1153776915</a>
                             <a class="btn btn--ghost w-full"
                                 href="https://www.google.com/maps?q=Gutemberg%204976%20Mar%20del%20Plata"
                                 target="_blank" rel="noopener">
@@ -386,6 +427,47 @@
         }, { threshold: 0.18 });
 
         items.forEach(el => io.observe(el));
+    </script>
+
+    <script>
+        const toggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('.nav');
+        const navLinks = nav.querySelectorAll('a');
+
+        const closeMenu = () => {
+            nav.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+        };
+
+        toggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // evita que el click “suba” y lo cierre
+            toggle.classList.toggle('is-open');
+            nav.classList.toggle('is-open');
+        });
+
+        // Cerrar al hacer click en un link
+        navLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // Cerrar al tocar fuera
+        document.addEventListener('click', (e) => {
+            const clickedOutside = !nav.contains(e.target) && !toggle.contains(e.target);
+            if (nav.classList.contains('is-open') && clickedOutside) closeMenu();
+        });
+
+        // Cerrar al hacer scroll (solo si está abierto)
+        window.addEventListener('scroll', () => {
+            if (nav.classList.contains('is-open')) closeMenu();
+        }, { passive: true });
+    </script>
+
+    <script>
+        const toggleServices = document.getElementById('toggle-services');
+        const badges = document.querySelector('.badges');
+
+        toggleServices.addEventListener('click', () => {
+            badges.classList.toggle('is-open');
+            toggleServices.classList.toggle('is-open');
+        });
     </script>
 
 
