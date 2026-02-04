@@ -12,7 +12,7 @@
   --radius2: 24px;
   --max: 2000px;
   --wa-green: #25D366;
-  --wa-green-dark: #1ebe5e;
+  --wa-green-dark: #1ebe5eaa;
 }
 
 * {
@@ -25,13 +25,18 @@ html {
 
 body {
   margin: 0;
-  font-family: "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  
   color: var(--text);
   background:
     radial-gradient(900px 500px at 15% 10%, rgba(255, 59, 48, .18), transparent 60%),
     radial-gradient(900px 500px at 85% 25%, rgba(255, 122, 24, .14), transparent 55%),
     linear-gradient(180deg, var(--bg), #07070a 60%);
 }
+
+body {
+  font-family: "Rajdhani", system-ui, sans-serif;
+}
+
 
 a {
   color: inherit;
@@ -47,8 +52,6 @@ a {
 
 
 
-
-/* Header */
 .header {
   position: sticky;
   top: 0;
@@ -75,7 +78,7 @@ a {
 }
 
 .brand__logo {
-  height: 111px;
+  height: 100px;
   width: auto;
   display: block;
   object-fit: contain;
@@ -217,6 +220,13 @@ a {
 .btn--primary {
   background: var(--accent);
   color: #101015;
+}
+
+.btn--primary.datos {
+  background: var(--accent);
+  width: 100%;
+  padding: 12px 16px;
+  font-size: 14px;
 }
 
 .btn--primary:hover {
@@ -591,7 +601,7 @@ h1 {
 
 .split__cta:hover {
   transform: translateY(-2px);
-  background-color: #1ebe5ed0;
+  background: #1ebe5e;
 }
 
 
@@ -742,14 +752,16 @@ h1 {
   right: 12px;
 }
 
-/* En mobile podés ocultarlas (ya hay swipe) */
-@media (max-width: 980px) {}
 
-
-/* Responsive */
 @media (max-width: 980px) {
+   .header__inner {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
-
+  .menu-toggle {
+    margin-right: 6px; /* separa del borde derecho */
+  }
 
   .split,
   .split--reverse {
@@ -976,6 +988,16 @@ h1 {
   display: grid;
   gap: 10px;
   margin-top: 14px;
+}
+
+.btn--primary.w-full {
+  background: var(--wa-green-dark);
+  color: var(--bg2);
+}
+
+.btn--primary.w-full:hover {
+  background: var(--wa-green);
+  color: #fff;
 }
 
 .mini {
