@@ -1224,6 +1224,10 @@ small {
   }
 }
 
+.info__item{
+  text-decoration: none;
+}
+
 section {
   scroll-margin-top: 100px;
 }
