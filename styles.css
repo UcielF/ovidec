@@ -229,6 +229,10 @@ a {
   font-size: 14px;
 }
 
+.btn--primary.w-full:hover{
+  cursor: pointer;
+}
+
 .btn--primary:hover {
   transform: translateY(-1px);
   opacity: .95;
@@ -513,7 +517,7 @@ h1 {
   backdrop-filter: blur(10px);
 }
 
-/* Sections */
+
 .section {
   padding: 54px 0;
 }
@@ -544,7 +548,6 @@ h1 {
   margin: 0;
 }
 
-/* Grid services */
 .grid {
   display: grid;
   gap: 14px;
@@ -554,7 +557,6 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
 }
 
-/* Servicios split */
 .services-split {
   padding: 90px 0;
 }
@@ -678,7 +680,7 @@ h1 {
 }
 
 
-/* overlay sutil para legibilidad visual */
+
 .split__media::after {
   content: "";
   position: absolute;
@@ -693,7 +695,7 @@ h1 {
   justify-content: center;
 }
 
-/* Animación on-scroll */
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -726,7 +728,7 @@ h1 {
   user-select: none;
 }
 
-/* Flechas */
+
 .split__arrow {
   position: absolute;
   top: 50%;
@@ -858,7 +860,6 @@ h1 {
   .trust{ grid-template-columns: 1fr; }
 }
 
-/* nosotros */
 .about {
   display: grid;
   grid-template-columns: 1.1fr .9fr;
@@ -1087,6 +1088,8 @@ small {
   text-decoration-color: rgba(255, 255, 255, .18);
 }
 
+
+
 .redes-flotantes {
   z-index: 2000;
   position: fixed;
@@ -1154,7 +1157,7 @@ small {
 }
 
 
-/* Responsive */
+
 @media (max-width: 980px) {
   .hero__grid {
     grid-template-columns: 1fr;
@@ -1166,7 +1169,6 @@ small {
     margin-left: auto;
     margin-bottom: 14px;
     padding: 10px 16px;
-    /* un poco más grande para el pulgar */
     font-size: 13px;
   }
 
@@ -1206,7 +1208,6 @@ small {
     margin-left: auto;
     margin-bottom: 14px;
     padding: 10px 16px;
-    /* un poco más grande para el pulgar */
     font-size: 13px;
   }
 
@@ -1222,3 +1223,8 @@ small {
     display: none;
   }
 }
+
+section {
+  scroll-margin-top: 100px;
+}
+
