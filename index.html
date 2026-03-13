@@ -5,7 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>OVIDEC | Inyección Electrónica y Diagnóstico Computarizado</title>
-    <meta name="description" content="OVIDEC: inyección electrónica, diagnóstico computarizado, 
+    <meta name="description"
+        content="OVIDEC: inyección electrónica, diagnóstico computarizado, 
                                                 limpieza y calibración de inyectores. Atención profesional en Mar del Plata.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -45,6 +46,7 @@
             <nav class="nav" aria-label="Navegación principal">
                 <a href="#">Inicio</a>
                 <a href="#servicios">Servicios</a>
+                <a href="proteccion/proteccion-electronica.html" class="nav__link">Protección vehicular</a>
                 <a href="#nosotros">Sobre OVIDEC</a>
                 <a href="#como">Cómo trabajamos</a>
                 <a href="#ubicacion">Ubicación</a>
@@ -99,12 +101,50 @@
                         </a>
                     </div>
 
+                    <section class="service-highlight">
+                        <div class="container">
+                            <span class="service-badge">Protección electrónica inteligente</span>
+                            <h2>Que el robo no te encuentre sin control</h2>
+                            <p>
+                                En segundos pueden llevarse un vehículo. En minutos puede estar desarmado.
+                                Con nuestro sistema de protección electrónica inteligente, podés monitorear
+                                tu auto en tiempo real y actuar cuando más importa.
+                            </p>
+
+                            <a href="proteccion/proteccion-electronica.html" class="cta-electronica">
+
+                                <div class="cta-electronica__icon">
+                                    <i class="fas fa-shield-halved"></i>
+                                </div>
+
+                                <div class="cta-electronica__text">
+                                    <span class="cta-electronica__small">Protección electrónica</span>
+                                    <strong>Ver sistema de seguridad vehicular</strong>
+                                    <span class="cta-electronica__sub">Ubicación 24/7 · Corte remoto · Instalación
+                                        oculta</span>
+                                </div>
+
+                                <div class="cta-electronica__arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+
+                            </a>
+
+
+
+                            <p class="service-note">
+                                No es un GPS común. Es una solución pensada para darte control real cuando más lo
+                                necesitás.
+                            </p>
+
+
+                        </div>
+                    </section>
 
                     <div class="hero__actions">
-                        <button class="btn btn--services btn--lg" id="toggle-services">
-                            <i class="fa-solid fa-list-check"></i>
-                            Ver servicios
-                            <i class="fa-solid fa-chevron-down chevron"></i>
+                        <button id="toggle-services">
+                            <span>Ver servicios</span>
+                            <i class="fas fa-chevron-down arrow"></i>
                         </button>
 
 
@@ -145,7 +185,8 @@
 
                         <div class="card__row">
                             <span class="k">Email</span>
-                            <span class="v"><a href="mailto:contacto@ovidec.com.ar" target="_blank" rel="noopener">contacto@ovidec.com.ar</a></span>
+                            <span class="v"><a href="mailto:contacto@ovidec.com.ar" target="_blank"
+                                    rel="noopener">contacto@ovidec.com.ar</a></span>
                         </div>
 
                         <div class="divider"></div>
@@ -484,7 +525,8 @@
                         <span class="k">¿Cómo llegar?</span>
                         <span class="v">
                             <a href="https://www.google.com/maps/dir/?api=1&destination=Gutemberg%204976%20Mar%20del%20Plata"
-                                target="_blank" rel="noopener"><i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i>
+                                target="_blank" rel="noopener"><i class="fa-solid fa-diamond-turn-right"
+                                    aria-hidden="true"></i>
                                 Empezar navegación
                             </a>
                         </span>
@@ -515,7 +557,8 @@
                                 <i class="fab fa-whatsapp"></i>
                                 WhatsApp
                             </a>
-                            <a class="btn btn--ghost w-full" href="tel:+541153776915"><i class="fa-solid fa-phone" aria-hidden="true"></i>Llamar</a>
+                            <a class="btn btn--ghost w-full" href="tel:+541153776915"><i class="fa-solid fa-phone"
+                                    aria-hidden="true"></i>Llamar</a>
                             <a class="btn btn--ghost w-full"
                                 href="https://www.google.com/maps?q=Gutemberg%204976%20Mar%20del%20Plata"
                                 target="_blank" rel="noopener">
@@ -582,91 +625,7 @@
         </div>
     </footer>
 
-    <script>
-        document.getElementById('y').textContent = new Date().getFullYear();
-    </script>
-    <script>
-        // reveal on scroll (IntersectionObserver)
-        const items = document.querySelectorAll('.reveal');
-
-        const io = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('is-in');
-                    io.unobserve(e.target); // anima una sola vez
-                }
-            });
-        }, { threshold: 0.18 });
-
-        items.forEach(el => io.observe(el));
-    </script>
-
-    <script>
-        const toggle = document.querySelector('.menu-toggle');
-        const nav = document.querySelector('.nav');
-        const navLinks = nav.querySelectorAll('a');
-
-        const closeMenu = () => {
-            nav.classList.remove('is-open');
-            toggle.classList.remove('is-open');
-        };
-
-        toggle.addEventListener('click', (e) => {
-            e.stopPropagation(); // evita que el click “suba” y lo cierre
-            toggle.classList.toggle('is-open');
-            nav.classList.toggle('is-open');
-        });
-
-
-        navLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-        // Cerrar al tocar fuera
-        document.addEventListener('click', (e) => {
-            const clickedOutside = !nav.contains(e.target) && !toggle.contains(e.target);
-            if (nav.classList.contains('is-open') && clickedOutside) closeMenu();
-        });
-
-    </script>
-
-    <script>
-        const toggleServices = document.getElementById('toggle-services');
-        const badges = document.querySelector('.badges');
-
-        toggleServices.addEventListener('click', () => {
-            badges.classList.toggle('is-open');
-            toggleServices.classList.toggle('is-open');
-        });
-    </script>
-
-    <script>
-        document.querySelectorAll('.split__media').forEach(media => {
-            const slider = media.querySelector('.split__slider');
-            const prev = media.querySelector('.split__arrow--prev');
-            const next = media.querySelector('.split__arrow--next');
-            if (!slider || !prev || !next) return;
-
-            const step = () => slider.clientWidth;
-
-            prev.addEventListener('click', () => slider.scrollBy({ left: -step(), behavior: 'smooth' }));
-            next.addEventListener('click', () => slider.scrollBy({ left: step(), behavior: 'smooth' }));
-        });
-    </script>
-
-    <script>
-        document.getElementById("form-whatsapp").addEventListener("submit", function (e) {
-            e.preventDefault();
-
-            const nombre = document.getElementById("nombre").value.trim();
-            const vehiculo = document.getElementById("vehiculo").value.trim();
-            const falla = document.getElementById("falla").value.trim();
-
-            const mensaje = `Hola OVIDEC! Soy ${nombre}. Tengo un ${vehiculo} y el problema es que ${falla}. ¿Podemos coordinar turno?`;
-
-            const url = `https://wa.me/5491153776915?text=${encodeURIComponent(mensaje)}`;
-
-            window.open(url, "_blank");
-        });
-    </script>
+    <script src="js/script.js" defer></script>
 
 
 
