@@ -314,6 +314,10 @@ a {
   z-index: -1;
 }
 
+h1{
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight:800;
+}
 
 .overlay {
   position: absolute;
