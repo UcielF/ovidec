@@ -648,3 +648,25 @@ a {
 i {
   margin-right: 8px;
 }
+
+@media (max-width: 768px) {
+
+  .header__social {
+    display: none;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+  }
+
+
+  @media (max-width: 768px) {
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+  }
+
+}
+
+}
